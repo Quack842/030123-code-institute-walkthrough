@@ -10,6 +10,7 @@
         </a>
     </div>
 </div>
+
 <!-- Catagory Card -->
 <div class="row">
     {% for category in categories %}
@@ -20,7 +21,7 @@
         </div>
         <div class="card-action">
           <a href="{{ url_for('edit_category', category_id=category.id) }}" class="btn lime darken-2">EDIT</a>
-          <a href="#" class="btn red">DELETE</a>
+          <a href="{{ url_for('delete_category', category_id=category.id) }}" class="btn red">DELETE</a>
         </div>
       </div>
     </div>
